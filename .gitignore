@@ -1,3 +1,5 @@
+Temp/UnityLockfile
+Temp/UnityTempFile*
 
 [Ll]ibrary/
 [Tt]emp/
@@ -53,4 +55,3 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
