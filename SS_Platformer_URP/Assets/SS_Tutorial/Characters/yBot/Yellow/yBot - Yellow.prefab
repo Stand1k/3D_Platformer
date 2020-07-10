@@ -1957,6 +1957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e53bc71f9e98314092b4590f3cf9cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playableCharacterType: 1
   SkinnedMeshAnimator: {fileID: 8528190092190582598}
   MoveRight: 0
   MoveLeft: 0

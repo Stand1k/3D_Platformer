@@ -29,6 +29,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.00000007792054
       objectReference: {fileID: 0}
+    - target: {fileID: 680716738736084727, guid: c4879d586e240454a8e48ca165634542,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.0000002408318
+      objectReference: {fileID: 0}
     - target: {fileID: 1038275090202158970, guid: c4879d586e240454a8e48ca165634542,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -133,6 +138,11 @@ PrefabInstance:
         type: 3}
       propertyPath: material
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232438885783780048, guid: c4879d586e240454a8e48ca165634542,
+        type: 3}
+      propertyPath: playableCharacterType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6232438885783780049, guid: c4879d586e240454a8e48ca165634542,
         type: 3}

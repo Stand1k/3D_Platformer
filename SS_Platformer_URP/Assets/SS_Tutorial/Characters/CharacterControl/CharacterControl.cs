@@ -13,8 +13,16 @@ namespace ss_tutorial
         Attack,
     }
 
+    public enum SS_Scenes
+    {
+        CharacterSelect,
+        Main,
+    }
+
+
     public class CharacterControl : MonoBehaviour
     {
+        public PlayableCharacterType playableCharacterType;
         public Animator SkinnedMeshAnimator;
         public bool MoveRight;
         public bool MoveLeft;
@@ -25,7 +33,6 @@ namespace ss_tutorial
         public List<GameObject> BottomSpheres = new List<GameObject>();
         public List<GameObject> FrontSpheres = new List<GameObject>();
         public List<Collider> RagdollParts = new List<Collider>();
-        //public List<Collider> CollidingParts = new List<Collider>();
 
         public float GravityMultiplier;
         public float PullMultiplier;
@@ -56,12 +63,21 @@ namespace ss_tutorial
             }
              
             FaceForward(true);
-            //SetRagdollParts();
             SetColliderSpheres();
 
             if(SwitchBack)
             {
                 FaceForward(false);
+            }
+
+            RegisterCharacter();
+        }
+
+        private void RegisterCharacter()
+        {
+            if(!CharacterManager.Instance.Characters.Contains(this))
+            {
+                CharacterManager.Instance.Characters.Add(this);
             }
         }
 
@@ -193,6 +209,11 @@ namespace ss_tutorial
 
         public void FaceForward(bool forward)
         {
+            if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.Equals(SS_Scenes.CharacterSelect.ToString()))
+            {
+                return;
+            }
+
             if(forward)
             {
                 transform.rotation = Quaternion.Euler(0f, 0f, 0f);

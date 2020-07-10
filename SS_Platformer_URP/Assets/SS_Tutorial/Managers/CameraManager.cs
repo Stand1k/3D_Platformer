@@ -6,6 +6,8 @@ namespace ss_tutorial
 {
     public class CameraManager : Singleton<CameraManager>
     {
+        public Camera MainCamera;
+
         private Coroutine routine;
         private CameraController cameraController;
         public CameraController CAM_CONTROLLER
@@ -20,10 +22,12 @@ namespace ss_tutorial
             }
         }
 
-        //private void Awake()
-        //{
-        //    Time.timeScale = 0.3f;
-        //}
+        private void Awake()
+        {
+            //Time.timeScale = 0.3f;
+            GameObject obj = GameObject.Find("Main Camera");
+            MainCamera = obj.GetComponent<Camera>();
+        }
 
         IEnumerator _CamShake(float sec)
         {
