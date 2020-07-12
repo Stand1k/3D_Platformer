@@ -19,7 +19,7 @@ namespace ss_tutorial
                 }
                 else
                 {
-                    Debug.Log("must select character first");
+                    Debug.Log("Must select character first");
                 }
                
             }
