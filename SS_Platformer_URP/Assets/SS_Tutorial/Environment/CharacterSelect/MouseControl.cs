@@ -12,13 +12,15 @@ namespace ss_tutorial
         public CharacterSelect characterSelect;
         CharacterSelectLight characterSelectLight;
         CharacterHoverLight characterHoverLight;
-
+        Animator characterSelectCamAnimator;
 
         private void Awake()
         {
             characterSelect.SelectedCharacterType = PlayableCharacterType.NONE;
             characterSelectLight = GameObject.FindObjectOfType<CharacterSelectLight>();
             characterHoverLight = GameObject.FindObjectOfType<CharacterHoverLight>();
+
+            characterSelectCamAnimator = GameObject.Find("CharacterSelectCameraController").GetComponent<Animator>();
         }
 
         private void Update()
@@ -44,6 +46,8 @@ namespace ss_tutorial
                 {
                     characterSelect.SelectedCharacterType = selectedCharacterType;
                     characterSelectLight.transform.position = characterHoverLight.transform.position;
+                    CharacterControl control = CharacterManager.Instance.GetCharacter(selectedCharacterType);
+                    characterSelectLight.transform.parent = control.SkinnedMeshAnimator.transform;
                     characterSelectLight.light.enabled = true;
                 }
                 else
@@ -51,6 +55,20 @@ namespace ss_tutorial
                     characterSelect.SelectedCharacterType = PlayableCharacterType.NONE;
                     characterSelectLight.light.enabled = false;
                 }
+
+                foreach(CharacterControl c in CharacterManager.Instance.Characters)
+                {
+                    if(c.playableCharacterType == selectedCharacterType)
+                    {
+                        c.SkinnedMeshAnimator.SetBool(TransitionParameter.ClickAnimation.ToString(), true);
+                    }
+                    else
+                    {
+                        c.SkinnedMeshAnimator.SetBool(TransitionParameter.ClickAnimation.ToString(), false);
+                    }
+                }
+
+                characterSelectCamAnimator.SetBool(selectedCharacterType.ToString(), true);
             }
         }
     }

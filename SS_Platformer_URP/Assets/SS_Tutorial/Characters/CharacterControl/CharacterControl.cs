@@ -11,6 +11,7 @@ namespace ss_tutorial
         ForceTransition,
         Grounded,
         Attack,
+        ClickAnimation,
     }
 
     public enum SS_Scenes

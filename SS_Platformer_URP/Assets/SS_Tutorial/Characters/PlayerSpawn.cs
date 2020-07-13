@@ -37,7 +37,7 @@ namespace ss_tutorial
             obj.transform.position = this.transform.position;
             GetComponent<MeshRenderer>().enabled = false;
 
-            Cinemachine.CinemachineVirtualCamera[] arr = FindObjectsOfType<Cinemachine.CinemachineVirtualCamera>();
+            Cinemachine.CinemachineVirtualCamera[] arr = GameObject.FindObjectsOfType<Cinemachine.CinemachineVirtualCamera>();
             foreach(Cinemachine.CinemachineVirtualCamera v in arr)
             {
                 CharacterControl control = CharacterManager.Instance.GetCharacter(characterSelect.SelectedCharacterType);
