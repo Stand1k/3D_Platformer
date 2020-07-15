@@ -12,6 +12,7 @@ namespace ss_tutorial
         Grounded,
         Attack,
         ClickAnimation,
+        TransitionIndex,
     }
 
     public enum SS_Scenes
@@ -25,6 +26,8 @@ namespace ss_tutorial
     {
         public PlayableCharacterType playableCharacterType;
         public Animator SkinnedMeshAnimator;
+        public bool MoveUp;
+        public bool MoveDown;
         public bool MoveRight;
         public bool MoveLeft;
         public bool Jump;

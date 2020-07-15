@@ -8,7 +8,26 @@ namespace ss_tutorial
     {
         void Update()
         {
-            if(Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.W))
+            {
+                VirtualInputManager.Instance.MoveUp = true;
+            }
+            else
+            {
+                VirtualInputManager.Instance.MoveUp = false;
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                VirtualInputManager.Instance.MoveDown = true;
+            }
+            else
+            {
+                VirtualInputManager.Instance.MoveDown = false;
+            }
+
+
+            if (Input.GetKey(KeyCode.D))
             {
                 VirtualInputManager.Instance.MoveRight = true;
             }
