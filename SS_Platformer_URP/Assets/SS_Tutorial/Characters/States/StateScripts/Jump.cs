@@ -13,7 +13,7 @@ namespace ss_tutorial
         //public AnimationCurve Gravity;
         public AnimationCurve Pull;
         private bool isJumped;
-
+        
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             if(JumpTiming == 0f)

@@ -38,10 +38,9 @@ namespace ss_tutorial
             
         }
 
-
         bool IsGrounded(CharacterControl control)
         {
-            if(control.RIGID_BODY.velocity.y > -0.001f && control.RIGID_BODY.velocity.y <= 0f)
+            if(control.RIGID_BODY.velocity.y == 0f && control.RIGID_BODY.velocity.magnitude == 0f)
             {
                 return true;
             }
