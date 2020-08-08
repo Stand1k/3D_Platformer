@@ -26,10 +26,14 @@ namespace ss_tutorial
         {
           CharacterControl control = characterState.GetCharacterControl(animator);
           if(MakeTransition(control))
-            {
-                animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), Index);
-            }
-        }
+           {
+               animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), Index);
+           }
+           else
+           {
+               animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), 0);
+           }
+}
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -37,6 +41,10 @@ namespace ss_tutorial
             if (MakeTransition(control))
             {
                 animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), Index);
+            }
+            else
+            {
+                animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), 0);
             }
         }
 

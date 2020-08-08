@@ -349,7 +349,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 1.0029787
+  m_ExitTime: 1.0002133
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -644,16 +644,16 @@ AnimatorStateMachine:
     m_Position: {x: 800, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8373347407176630322}
-    m_Position: {x: 510, y: 250, z: 0}
+    m_Position: {x: 500, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1531534328922266474}
-    m_Position: {x: 480, y: 350, z: 0}
+    m_Position: {x: 550, y: 390, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6832385875036967335}
-    m_Position: {x: 750, y: 350, z: 0}
+    m_Position: {x: 850, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5656414901397401202}
-    m_Position: {x: 330, y: 420, z: 0}
+    m_Position: {x: 830, y: 420, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -679,6 +679,7 @@ MonoBehaviour:
   ListAbilityData:
   - {fileID: 11400000, guid: e25ab819d0094bd439f738c63d5e460c, type: 2}
   - {fileID: 11400000, guid: 74cd5bf4a83c0774c9af74165b57ebb4, type: 2}
+  - {fileID: 11400000, guid: 32ee2b1b5369c3341aa6c949b542d5f1, type: 2}
 --- !u!1102 &-1787898318163025825
 AnimatorState:
   serializedVersion: 5
@@ -1020,6 +1021,31 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4d38413ea5b60944a930a501ef27aa41, type: 2}
   - {fileID: 11400000, guid: da8d5a7ce5716a24482a8b913b7199f2, type: 2}
   - {fileID: 11400000, guid: 313e1024ae8c29349a8d37bcda69bb97, type: 2}
+--- !u!1101 &1067502366291414058
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: TransitionIndex
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -3549852838530607701}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.9267575
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &1081326493280193961
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1597,9 +1623,10 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CrouchIdle
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 1067502366291414058}
   m_StateMachineBehaviours:
   - {fileID: -2147336004273730589}
   m_Position: {x: 50, y: 50, z: 0}

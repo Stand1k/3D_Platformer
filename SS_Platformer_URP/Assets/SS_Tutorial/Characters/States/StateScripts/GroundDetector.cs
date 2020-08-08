@@ -40,7 +40,7 @@ namespace ss_tutorial
 
         bool IsGrounded(CharacterControl control)
         {
-            if(control.RIGID_BODY.velocity.y == 0f && control.RIGID_BODY.velocity.magnitude == 0f)
+            if(control.RIGID_BODY.velocity.y > -0.001f && control.RIGID_BODY.velocity.y <= 0f)
             {
                 return true;
             }
@@ -53,7 +53,7 @@ namespace ss_tutorial
                     RaycastHit hit;
                     if (Physics.Raycast(o.transform.position, -Vector3.up, out hit, Distance))
                     {
-                        if(control.RagdollParts.Contains(hit.collider))
+                        if(!control.RagdollParts.Contains(hit.collider) && !Ledge.IsLedge(hit.collider.gameObject))
                         {
                             return true;
                         }
