@@ -50,7 +50,6 @@ namespace ss_tutorial
             list.Add(obj.gameObject);
             obj.gameObject.SetActive(false);
         }
-
     }
 
 }

@@ -12,7 +12,7 @@ namespace ss_tutorial
         {
             get
             {
-               //_instance = (T)FindObjectOfType(typeof(T));
+              // _instance = (T)FindObjectOfType(typeof(T));
                 if (_instance == null)
                 {
                     GameObject obj = new GameObject();
