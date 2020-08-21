@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da4a8ef3b7b53a041b0565ceb4c368c9, type: 3}
-  m_Name: FallingBackDeath
+  m_Name: Death_SweepFall
   m_EditorClassIdentifier: 
-  GeneralBodyParts: 0000000002000000
-  Animator: {fileID: 9100000, guid: 733cf755010658c4fa20c2a7fbe7e288, type: 2}
-  LaunchIntoAir: 0
-  IsFacingAttacker: 1
+  GeneralBodyParts: 
+  Animator: {fileID: 9100000, guid: 81bc30dac76a5174bad386b806c893b8, type: 2}
+  deathType: 2
+  IsFacingAttacker: 0

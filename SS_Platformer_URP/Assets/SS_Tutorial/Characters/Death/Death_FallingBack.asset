@@ -9,15 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8459f3916a12a3e47b2b1c89ca7418c6, type: 3}
-  m_Name: Player_Smash_Landing_Attack
+  m_Script: {fileID: 11500000, guid: da4a8ef3b7b53a041b0565ceb4c368c9, type: 3}
+  m_Name: Death_FallingBack
   m_EditorClassIdentifier: 
-  debug: 0
-  StartAttackTime: 0.85
-  EndAttackTime: 0.99
-  ColliderNames: []
-  deathType: 2
-  MustCollide: 0
-  MustFaceAttacker: 0
-  LethalRange: 2
-  MaxHits: 10
+  GeneralBodyParts: 0000000002000000
+  Animator: {fileID: 9100000, guid: 733cf755010658c4fa20c2a7fbe7e288, type: 2}
+  deathType: 0
+  IsFacingAttacker: 1
