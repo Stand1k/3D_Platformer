@@ -2055,6 +2055,7 @@ GameObject:
   - component: {fileID: 2601753497507329784}
   - component: {fileID: 6749348532732766316}
   - component: {fileID: 6203575659005580452}
+  - component: {fileID: 8178648161039837370}
   m_Layer: 0
   m_Name: yBot - Yellow
   m_TagString: Untagged
@@ -2201,6 +2202,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfd43a3feb8dad64a8c1df107e51de2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageTaken: 0
+--- !u!114 &8178648161039837370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232438885783780061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e89819d609caa47bc3de9af8a80390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6242290640690628191

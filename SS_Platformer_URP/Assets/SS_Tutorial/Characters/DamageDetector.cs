@@ -9,8 +9,11 @@ namespace ss_tutorial
         CharacterControl control;
         GeneralBodyPart DamagedPart;
 
+        public int DamageTaken;
+
         private void Awake()
         {
+            DamageTaken = 0;
             control = GetComponent<CharacterControl>();
         }
 
@@ -70,7 +73,6 @@ namespace ss_tutorial
                 else
                 {
                     float dist = Vector3.SqrMagnitude(this.gameObject.transform.position - info.Attacker.transform.position);
-                   //Debug.Log(this.gameObject.name + " dist: " + dist.ToString());
                     if(dist <= info.LethalRange)
                     {
                         TakeDamage(info);
@@ -102,21 +104,23 @@ namespace ss_tutorial
 
         private void TakeDamage(AttackInfo info)
         {
+            if(DamageTaken > 0)
+            {
+                return;
+            }
+
             if(info.MustCollide)
             {
                 CameraManager.Instance.ShakeCamera(0.35f);
             }
 
-            //Debug.Log(info.Attacker.gameObject.name + " hits: " + this.gameObject.name);
-            //Debug.Log(this.gameObject.name + " hit " + DamagedPart.ToString());
-
-            //control.SkinnedMeshAnimator.runtimeAnimatorController = info.AttackAbility.GetDeathAnimator();
             control.SkinnedMeshAnimator.runtimeAnimatorController = DeathAnimationManager.Instance.GetAnimator(DamagedPart, info);
             info.CurrentHits++;
 
             control.GetComponent<BoxCollider>().enabled = false;
             control.RIGID_BODY.useGravity = false;
-            //control.RIGID_BODY.detectCollisions = false;
+
+            DamageTaken++;
         }
 
     }

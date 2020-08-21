@@ -13,38 +13,43 @@ namespace ss_tutorial
         public string ParentObjectName = string.Empty;
         public bool StickToParent;
 
-        private bool IsSpawned;
-
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             if(SpawnTiming == 0f)
             {
                 CharacterControl control = characterState.GetCharacterControl(animator);
-                SpawnObj(control);
-                IsSpawned = true;
+                SpawnObj(control); 
             }
         }
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            if(!IsSpawned)
+            CharacterControl control = characterState.GetCharacterControl(animator);
+            if (!control.animationProgress.PoolObjectList.Contains(ObjectType))
             {
                 if(stateInfo.normalizedTime >= SpawnTiming)
                 {
-                    CharacterControl control = characterState.GetCharacterControl(animator);
                     SpawnObj(control);
-                    IsSpawned = true;
                 }
             }
         }
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            IsSpawned = false; 
+            CharacterControl control = characterState.GetCharacterControl(animator);
+            if (control.animationProgress.PoolObjectList.Contains(ObjectType))
+            {
+                control.animationProgress.PoolObjectList.Remove(ObjectType);
+            }
         }
 
         private void SpawnObj(CharacterControl control)
         {
+            if(control.animationProgress.PoolObjectList.Contains(ObjectType))
+            {
+                return;
+            }
+
             GameObject obj = PoolManager.Instance.GetObject(ObjectType);
 
             if(!string.IsNullOrEmpty(ParentObjectName))
@@ -61,6 +66,8 @@ namespace ss_tutorial
             }
 
             obj.SetActive(true);
+
+            control.animationProgress.PoolObjectList.Add(ObjectType);
         }
     }
 

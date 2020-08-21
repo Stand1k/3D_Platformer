@@ -12,14 +12,15 @@ namespace ss_tutorial
         public float JumpForce;
         //public AnimationCurve Gravity;
         public AnimationCurve Pull;
-        private bool isJumped;
         
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             if(JumpTiming == 0f)
             {
+                CharacterControl control = characterState.GetCharacterControl(animator);
+
                 characterState.GetCharacterControl(animator).RIGID_BODY.AddForce(Vector3.up * JumpForce);
-                isJumped = true;
+                control.animationProgress.Jumped = true;
             }
 
             animator.SetBool(TransitionParameter.Grounded.ToString(), false);
@@ -28,14 +29,12 @@ namespace ss_tutorial
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             CharacterControl control = characterState.GetCharacterControl(animator);
-
-            //control.GravityMultiplier = Gravity.Evaluate(stateInfo.normalizedTime);
             control.PullMultiplier = Pull.Evaluate(stateInfo.normalizedTime);
 
-            if(!isJumped && stateInfo.normalizedTime >= JumpTiming)
+            if(!control.animationProgress.Jumped && stateInfo.normalizedTime >= JumpTiming)
             {
                 characterState.GetCharacterControl(animator).RIGID_BODY.AddForce(Vector3.up * JumpForce);
-                isJumped = true;
+                control.animationProgress.Jumped = true;
             }
         }
 
@@ -43,7 +42,7 @@ namespace ss_tutorial
         {
             CharacterControl control = characterState.GetCharacterControl(animator);
             control.PullMultiplier = 0f;
-            isJumped = false;
+            control.animationProgress.Jumped = false;
         }
     }
 
