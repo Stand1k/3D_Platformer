@@ -13,11 +13,13 @@ namespace ss_tutorial
         Attack,
         ClickAnimation,
         TransitionIndex,
+        Turbo,
     }
 
     public enum SS_Scenes
     {
         CharacterSelect,
+        LedgeGrab,
         Main,
     }
 
@@ -26,6 +28,7 @@ namespace ss_tutorial
     {
         public PlayableCharacterType playableCharacterType;
         public Animator SkinnedMeshAnimator;
+        public bool Turbo;
         public bool MoveUp;
         public bool MoveDown;
         public bool MoveRight;

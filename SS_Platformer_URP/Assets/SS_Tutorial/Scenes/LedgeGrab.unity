@@ -1629,6 +1629,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: yBot - Yellow
       objectReference: {fileID: 0}
+    - target: {fileID: 6232438885783780061, guid: c4879d586e240454a8e48ca165634542,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6749348532732766316, guid: c4879d586e240454a8e48ca165634542,
         type: 3}
       propertyPath: m_Enabled

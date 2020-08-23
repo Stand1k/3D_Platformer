@@ -15,6 +15,15 @@ namespace ss_tutorial
 
         void Update()
         {
+            if (VirtualInputManager.Instance.Turbo)
+            {
+                characterControl.Turbo = true;
+            }
+            else
+            {
+                characterControl.Turbo = false;
+            }
+
             if (VirtualInputManager.Instance.MoveUp)
             {
                 characterControl.MoveUp = true;
