@@ -89,10 +89,13 @@ namespace ss_tutorial
                 {
                     foreach (string name in info.ColliderName)
                     {
-                        if (name == collider.gameObject.name)
+                        if (name.Equals(collider.gameObject.name))
                         {
-                            DamagedPart = trigger.generalBodyPart;
-                            return true;
+                            if(collider.transform.root.gameObject == info.Attacker.gameObject)
+                            {
+                                DamagedPart = trigger.generalBodyPart;
+                                return true;
+                            }
                         }
                     }
                 }
@@ -106,7 +109,7 @@ namespace ss_tutorial
         {
             if(DamageTaken > 0)
             {
-                return;
+               return;
             }
 
             if(info.MustCollide)
@@ -118,6 +121,7 @@ namespace ss_tutorial
             info.CurrentHits++;
 
             control.GetComponent<BoxCollider>().enabled = false;
+            control.ledgeChecker.GetComponent<BoxCollider>().enabled = false;
             control.RIGID_BODY.useGravity = false;
 
             DamageTaken++;

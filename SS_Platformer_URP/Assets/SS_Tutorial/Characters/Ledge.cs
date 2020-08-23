@@ -18,6 +18,16 @@ namespace ss_tutorial
 
             return true;
         }
+
+        public static bool IsLedgeChecker(GameObject obj)
+        {
+            if (obj.GetComponent<LedgeChecker>() == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 
 }

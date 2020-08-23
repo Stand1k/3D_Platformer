@@ -18,7 +18,7 @@ namespace ss_tutorial
 
             CharacterControl control = characterState.GetCharacterControl(animator);
 
-            if(control.Attack)
+            if(control.animationProgress.AttackTriggered)
             {
                 animator.SetBool(TransitionParameter.Attack.ToString(), true);
             }
@@ -30,22 +30,13 @@ namespace ss_tutorial
 
             if (control.MoveLeft && control.MoveRight)
             {
-                animator.SetBool(TransitionParameter.Move.ToString(), false);
-                return;
+               //empty
             }
-
-            if (!control.MoveLeft && !control.MoveRight) 
-            {
-                animator.SetBool(TransitionParameter.Move.ToString(), false);
-                return;
-            }
-
-            if (control.MoveRight)
+            else if (control.MoveRight)
             {
                 animator.SetBool(TransitionParameter.Move.ToString(), true);
             }
-
-            if (control.MoveLeft)
+            else if (control.MoveLeft)
             {
                 animator.SetBool(TransitionParameter.Move.ToString(), true);
             }

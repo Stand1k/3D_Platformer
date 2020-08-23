@@ -99,7 +99,7 @@ namespace ss_tutorial
                 if(stateInfo.normalizedTime < EndAttackTime + ((EndAttackTime - StartAttackTime) / 2f))
                 {
                     CharacterControl control = characterState.GetCharacterControl(animator);
-                    if(control.Attack)
+                    if(control.animationProgress.AttackTriggered)
                     {
                         //Debug.Log("uppercut triggered");
                         animator.SetBool(TransitionParameter.Attack.ToString(), true);

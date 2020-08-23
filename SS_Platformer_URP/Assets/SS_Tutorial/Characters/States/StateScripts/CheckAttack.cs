@@ -16,7 +16,7 @@ namespace ss_tutorial
         {
             CharacterControl control = characterState.GetCharacterControl(animator);
 
-            if (control.Attack)
+            if (control.animationProgress.AttackTriggered)
             {
                 animator.SetBool(TransitionParameter.Attack.ToString(), true);
             }

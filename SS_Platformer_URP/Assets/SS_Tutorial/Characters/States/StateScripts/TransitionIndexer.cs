@@ -97,7 +97,7 @@ namespace ss_tutorial
 
                     case TransitionConditionType.ATTACK:
                         {
-                            if (!control.Attack)
+                            if (!control.animationProgress.AttackTriggered)
                             {
                                 return false;
                             }

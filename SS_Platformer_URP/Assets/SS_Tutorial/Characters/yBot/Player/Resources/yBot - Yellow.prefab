@@ -2099,8 +2099,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.29, y: 1.89, z: 0.4}
-  m_Center: {x: 0, y: 0.915, z: 0}
+  m_Size: {x: 0.29, y: 1.89, z: 0.3054676}
+  m_Center: {x: 0, y: 0.915, z: 0.047266215}
 --- !u!54 &6749348534018314869
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2138,6 +2138,7 @@ MonoBehaviour:
   Jump: 0
   Attack: 0
   ledgeChecker: {fileID: 0}
+  animationProgress: {fileID: 0}
   ColliderEdgePrefab: {fileID: 3231887789012445216, guid: fbe58e26de7fad1458e14916452bdb4a,
     type: 3}
   BottomSpheres: []
@@ -2217,6 +2218,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e89819d609caa47bc3de9af8a80390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Jumped: 0
+  CameraShaken: 0
+  PoolObjectList: 
+  AttackTriggered: 0
+  MaxPressTime: 0.1
 --- !u!1 &6242290640690628191
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ namespace ss_tutorial
     public class ShakeCamera : StateData
     {
         [Range(0f, 0.99f)]
-        public float ShakeTiming; //private bool isShaken = false;
+        public float ShakeTiming; 
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
