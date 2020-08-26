@@ -24,7 +24,7 @@ namespace ss_tutorial
 
         private void Awake()
         {
-            Time.timeScale = 0.3f;
+            //Time.timeScale = 0.3f;
             GameObject obj = GameObject.Find("Main Camera");
             MainCamera = obj.GetComponent<Camera>();
         }

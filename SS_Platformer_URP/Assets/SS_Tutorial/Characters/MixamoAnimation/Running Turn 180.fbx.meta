@@ -38,7 +38,7 @@ ModelImporter:
       name: Running Turn 180
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 0
+      firstFrame: 0.9
       lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 180
