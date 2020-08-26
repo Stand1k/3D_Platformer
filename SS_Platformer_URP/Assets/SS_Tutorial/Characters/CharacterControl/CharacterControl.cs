@@ -14,6 +14,7 @@ namespace ss_tutorial
         ClickAnimation,
         TransitionIndex,
         Turbo,
+        Turn,
     }
 
     public enum SS_Scenes
