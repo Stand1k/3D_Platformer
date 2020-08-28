@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b94f15f295e4b44805a3e579164142, type: 3}
   m_Name: Player_Running_MoveForward
   m_EditorClassIdentifier: 
+  AllowEarlyTurn: 1
   LockDirection: 1
   Constant: 0
   speedGraph:

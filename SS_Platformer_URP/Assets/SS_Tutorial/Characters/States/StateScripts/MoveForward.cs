@@ -7,6 +7,7 @@ namespace ss_tutorial
     [CreateAssetMenu(fileName = "New State", menuName = "SS_Tutorial/AbilityData/MoveForward")]
     public class MoveForward : StateData
     {
+        public bool AllowEarlyTurn;
         public bool LockDirection;
         public bool Constant;
         public AnimationCurve speedGraph;
@@ -15,7 +16,22 @@ namespace ss_tutorial
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
+            CharacterControl control = characterState.GetCharacterControl(animator);
 
+            if (AllowEarlyTurn && !control.animationProgress.disallowEarlyTurn)
+            {
+                if(control.MoveLeft)
+                {
+                    control.FaceForward(false);
+                }
+
+                if(control.MoveRight)
+                {
+                    control.FaceForward(true);
+                }
+            }
+
+            control.animationProgress.disallowEarlyTurn = false;
         }
 
         private void ControlledMove(CharacterControl control, Animator animator, AnimatorStateInfo stateInfo)
