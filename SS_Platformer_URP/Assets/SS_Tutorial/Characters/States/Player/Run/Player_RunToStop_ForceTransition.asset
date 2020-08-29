@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9326cebebd7573a4eb167d8811e87622, type: 3}
   m_Name: Player_RunToStop_ForceTransition
   m_EditorClassIdentifier: 
-  transtionTiming: 0.65
+  transtionTiming: 0.8
