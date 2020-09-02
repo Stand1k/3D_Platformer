@@ -25,6 +25,7 @@ namespace ss_tutorial
 
         public void GoToTarget()
         {
+            navMeshAgent.enabled = true;
             StartSphere.transform.parent = null;
             EndSphere.transform.parent = null;
 

@@ -76,7 +76,9 @@ namespace ss_tutorial
 
         Dictionary<string, int> GetAllLayers()
         {
+            //Open tag manager
             SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
+            //Tag manager property
             SerializedProperty layers = tagManager.FindProperty("layers");
             int layerSize = layers.arraySize;
 
