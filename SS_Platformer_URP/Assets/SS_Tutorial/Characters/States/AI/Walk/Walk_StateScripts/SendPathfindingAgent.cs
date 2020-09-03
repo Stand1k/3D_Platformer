@@ -14,7 +14,7 @@ namespace ss_tutorial
 
             if(control.aiProgress.pathFindingAgent == null)
             {
-              GameObject p = Instantiate(Resources.Load("PathfindingAgent", typeof(GameObject)) as GameObject);
+                GameObject p = Instantiate(Resources.Load("PathfindingAgent", typeof(GameObject)) as GameObject);
                 control.aiProgress.pathFindingAgent = p.GetComponent<PathFindingAgent>();
             }
 
@@ -25,12 +25,16 @@ namespace ss_tutorial
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            
+            CharacterControl control = characterState.GetCharacterControl(animator);
+            if(control.aiProgress.pathFindingAgent.StartWalk)
+            {
+                animator.SetBool(AI_Walk_Transitions.start_walking.ToString(), true);
+            }
         }
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            
+            animator.SetBool(AI_Walk_Transitions.start_walking.ToString(), false);
         }
     }
 
