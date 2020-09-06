@@ -11,8 +11,6 @@ namespace ss_tutorial
         public GameObject target;
         NavMeshAgent navMeshAgent;
 
-        public Vector3 StartPosition;
-        public Vector3 EndPosition;
         List<Coroutine> MoveRoutines = new List<Coroutine>();
 
         public GameObject StartSphere;
@@ -42,7 +40,11 @@ namespace ss_tutorial
 
             if(MoveRoutines.Count != 0)
             {
-                StopCoroutine(MoveRoutines[0]);
+                if(MoveRoutines[0] != null)
+                {
+                    StopCoroutine(MoveRoutines[0]);
+                }
+
                 MoveRoutines.RemoveAt(0);
             }
 
@@ -55,13 +57,11 @@ namespace ss_tutorial
             {
                 if(navMeshAgent.isOnOffMeshLink)
                 {
-                    StartPosition = transform.position;
-                    StartSphere.transform.position = transform.position;
+                    StartSphere.transform.position = navMeshAgent.currentOffMeshLinkData.startPos;
+                    EndSphere.transform.position = navMeshAgent.currentOffMeshLinkData.endPos;
+
                     navMeshAgent.CompleteOffMeshLink();
 
-                    yield return new WaitForEndOfFrame();
-                    EndPosition = transform.position;
-                    EndSphere.transform.position = transform.position;
                     navMeshAgent.isStopped = true;
                     StartWalk = true;
                     yield break;
@@ -70,11 +70,9 @@ namespace ss_tutorial
                 Vector3 dist = transform.position - navMeshAgent.destination;
                 if(Vector3.SqrMagnitude(dist) < 0.5f)
                 {
-                    StartPosition = transform.position;
-                    StartSphere.transform.position = transform.position;
+                    StartSphere.transform.position = navMeshAgent.destination;
 
-                    EndPosition = transform.position;
-                    EndSphere.transform.position = transform.position;
+                    EndSphere.transform.position = navMeshAgent.destination;
 
                     navMeshAgent.isStopped = true;
                     StartWalk = true;

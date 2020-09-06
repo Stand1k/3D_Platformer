@@ -117,9 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetPlayableCharacter: 1
   target: {fileID: 0}
-  StarPosition: {x: 0, y: 0, z: 0}
-  EndPosition: {x: 0, y: 0, z: 0}
   StartSphere: {fileID: 4977996042277692570, guid: 5d0dd6555712b2c42a1f79001fe7188e,
     type: 3}
   EndSphere: {fileID: 2527940221576040433, guid: be40969c656d8be468bfd0ed0fe5d2f5,
     type: 3}
+  StartWalk: 0
