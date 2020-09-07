@@ -36,6 +36,7 @@ namespace ss_tutorial
                 }
 
                 Physics.IgnoreLayerCollision(dic["Default"], dic["Default"], false);
+                Physics.IgnoreLayerCollision(dic[Layers.CHARACTER.ToString()], dic["Default"], false);
 
                 Debug.Log("default collisions set");
             }
@@ -74,7 +75,7 @@ namespace ss_tutorial
             }
         }
 
-        Dictionary<string, int> GetAllLayers()
+        public static Dictionary<string, int> GetAllLayers()
         {
             //Open tag manager
             SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
