@@ -46,7 +46,7 @@ namespace ss_tutorial
                     control.MoveRight = false;
                     control.MoveLeft = false;
 
-                        animator.SetBool(AI_Walk_Transitions.jump_platform.ToString(), true);
+                    animator.SetBool(AI_Walk_Transitions.jump_platform.ToString(), true);
                 }
             }
 
@@ -71,6 +71,25 @@ namespace ss_tutorial
                     {
                         animator.gameObject.SetActive(false);
                         animator.gameObject.SetActive(true);
+                    }
+                    //temp attack solution
+                    else
+                    {
+                        if(CharacterManager.Instance.GetPlayableCharacter().damageDetector.DamageTaken == 0)
+                        {
+                            if(control.IsFacingForward())
+                            {
+                                control.MoveRight = true;
+                                control.MoveLeft = false;
+                                control.Attack = true;
+                            }
+                            else
+                            {
+                                control.MoveRight = false;
+                                control.MoveLeft = true;
+                                control.Attack = true;
+                            }
+                        }
                     }
                 }
             } 

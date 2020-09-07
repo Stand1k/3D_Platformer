@@ -39,6 +39,7 @@ namespace ss_tutorial
         public LedgeChecker ledgeChecker;
         public AnimationProgress animationProgress;
         public AIProgress aiProgress;
+        public DamageDetector damageDetector;
 
         public GameObject ColliderEdgePrefab;
         public List<GameObject> BottomSpheres = new List<GameObject>();
@@ -85,6 +86,7 @@ namespace ss_tutorial
             ledgeChecker = GetComponentInChildren<LedgeChecker>();
             animationProgress = GetComponent<AnimationProgress>();
             aiProgress = GetComponentInChildren<AIProgress>();
+            damageDetector = GetComponentInChildren<DamageDetector>();
 
             RegisterCharacter();
         }
