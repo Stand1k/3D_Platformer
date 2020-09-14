@@ -15,10 +15,8 @@ MonoBehaviour:
   debug: 0
   StartAttackTime: 0.15
   EndAttackTime: 0.52
-  ColliderNames:
-  - LeftHand
-  - mixamorig:LeftHand
-  LaunchIntoAir: 0
+  AttackParts: 00000000
+  deathType: 0
   MustCollide: 1
   MustFaceAttacker: 0
   LethalRange: 0

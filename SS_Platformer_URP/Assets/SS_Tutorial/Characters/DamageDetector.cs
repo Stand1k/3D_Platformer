@@ -87,16 +87,33 @@ namespace ss_tutorial
             {
                 foreach (Collider collider in trigger.CollidingParts)
                 {
-                    foreach (string name in info.ColliderName)
+                    foreach (AttackPartType part in info.AttackParts)
                     {
-                        if (name.Equals(collider.gameObject.name))
+                        if (part == AttackPartType.LEFT_HAND)
                         {
-                            if(collider.transform.root.gameObject == info.Attacker.gameObject)
+                            if (collider.gameObject == info.Attacker.LeftHand_Attack)
                             {
                                 DamagedPart = trigger.generalBodyPart;
                                 return true;
                             }
                         }
+                        else if(part == AttackPartType.RIGHT_HAND)
+                        {
+                            if (collider.gameObject == info.Attacker.RightHand_Attack)
+                            {
+                                DamagedPart = trigger.generalBodyPart;
+                                return true;
+                            }
+                        }
+
+                        //if (part.Equals(collider.gameObject.name))
+                        //{
+                        //    if(collider.transform.root.gameObject == info.Attacker.gameObject)
+                        //    {
+                        //        DamagedPart = trigger.generalBodyPart;
+                        //        return true;
+                        //    }
+                        //}
                     }
                 }
             }
