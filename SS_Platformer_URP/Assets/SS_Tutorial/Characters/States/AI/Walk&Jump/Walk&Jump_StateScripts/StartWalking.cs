@@ -5,12 +5,7 @@ using UnityEngine.AI;
 
 namespace ss_tutorial
 {
-    public enum AI_Walk_Transitions
-    {
-        start_walking,
-        jump_platform,
-        fall_platform,
-    }
+   
 
     [CreateAssetMenu(fileName = "New State", menuName = "SS_Tutorial/AI/StartWalking")]
     public class StartWalking : StateData
@@ -73,6 +68,7 @@ namespace ss_tutorial
                         animator.gameObject.SetActive(true);
                     }
                     //temp attack solution
+                    /*
                     else
                     {
                         if(CharacterManager.Instance.GetPlayableCharacter().damageDetector.DamageTaken == 0)
@@ -91,6 +87,7 @@ namespace ss_tutorial
                             }
                         }
                     }
+                    */
                 }
             } 
 
