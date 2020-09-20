@@ -12,6 +12,7 @@ namespace ss_tutorial
         public bool AttackTriggered;
         public float MaxPressTime;
         public bool disallowEarlyTurn;
+        public float AirMomentum;
 
         private CharacterControl control;
         private float PressTime;

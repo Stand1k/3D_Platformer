@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2af9bcfab537774f8d1dc1e3f6d7e0e, type: 3}
   m_Name: AITransition_WalkToRun
   m_EditorClassIdentifier: 
-  aiTransition: 0
-  NextAI: 0
+  aiTransition: 1
+  NextAI: 1
