@@ -121,14 +121,6 @@ namespace ss_tutorial
             return TriggerDetectors;
         }
 
-
-        /* private IEnumerator Start()
-         {
-             yield return new WaitForSeconds(5f);
-             RIGID_BODY.AddForce(200f * Vector3.up);
-             yield return new WaitForSeconds(0.5f);
-             TurnOnRagdoll();
-         } */ 
         public void SetRagdollParts()
         {
             RagdollParts.Clear();
@@ -143,6 +135,14 @@ namespace ss_tutorial
                     {
                         c.isTrigger = true;
                         RagdollParts.Add(c);
+                        c.attachedRigidbody.interpolation = RigidbodyInterpolation.Interpolate;
+                        c.attachedRigidbody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+
+                        CharacterJoint joint = c.GetComponent<CharacterJoint>();
+                        if(joint != null)
+                        {
+                            joint.enableProjection = true;
+                        }
 
                         if (c.GetComponent<TriggerDetector>() == null)
                         {
@@ -155,16 +155,37 @@ namespace ss_tutorial
       
         public void TurnOnRagdoll()
         {
+            //change layers
+            Transform[] arr = GetComponentsInChildren<Transform>();
+            foreach(Transform t in arr)
+            {
+                t.gameObject.layer = LayerMask.NameToLayer(Layers.DEADBODY.ToString());
+            }
+
+            //save bodypart positions
+            foreach (Collider c in RagdollParts)
+            {
+                TriggerDetector det = c.GetComponent<TriggerDetector>();
+                det.LastPosition = c.gameObject.transform.localPosition;
+                det.LastRotation = c.gameObject.transform.localRotation;
+            }
+
+            //turn off animator
             RIGID_BODY.useGravity = false;
             RIGID_BODY.velocity = Vector3.zero;
             this.gameObject.GetComponent<BoxCollider>().enabled = false;
             SkinnedMeshAnimator.enabled = false;
             SkinnedMeshAnimator.avatar = null;
 
+            //turn on ragdoll
             foreach(Collider c in RagdollParts)
             {
                 c.isTrigger = false;
                 c.attachedRigidbody.velocity = Vector3.zero;
+
+                TriggerDetector det = c.GetComponent<TriggerDetector>();
+                c.transform.localPosition = det.LastPosition;
+                c.transform.localRotation = det.LastRotation;
             }
         }
 

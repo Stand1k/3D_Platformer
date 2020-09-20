@@ -42,7 +42,7 @@ namespace ss_tutorial
         {
             CharacterControl control = characterState.GetCharacterControl(animator);
             control.PullMultiplier = 0f;
-            control.animationProgress.Jumped = false;
+            //control.animationProgress.Jumped = false;
         }
     }
 

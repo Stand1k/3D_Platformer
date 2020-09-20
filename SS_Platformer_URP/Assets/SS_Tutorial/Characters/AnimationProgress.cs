@@ -10,6 +10,7 @@ namespace ss_tutorial
         public bool CameraShaken;
         public List<PoolObjectType> PoolObjectList = new List<PoolObjectType>();
         public bool AttackTriggered;
+        public bool RagdollTriggered;
         public float MaxPressTime;
         public bool disallowEarlyTurn;
         public float AirMomentum;

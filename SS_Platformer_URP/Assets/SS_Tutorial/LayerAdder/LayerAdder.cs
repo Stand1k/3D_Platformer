@@ -10,6 +10,7 @@ namespace ss_tutorial
         CHARACTER,
         BOT,
         GROUND,
+        DEADBODY,
     }
 
     public class LayerAdder : MonoBehaviour

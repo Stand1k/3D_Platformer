@@ -49,7 +49,10 @@ namespace ss_tutorial
                     next = s;
                 }
             }
-            next.gameObject.SetActive(true);
+            if (next != null)
+            {
+                next.gameObject.SetActive(true);
+            }
         }
     }
 

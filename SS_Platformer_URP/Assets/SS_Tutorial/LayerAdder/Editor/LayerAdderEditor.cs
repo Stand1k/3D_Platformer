@@ -37,6 +37,7 @@ namespace ss_tutorial
 
                 Physics.IgnoreLayerCollision(dic["Default"], dic["Default"], false);
                 Physics.IgnoreLayerCollision(dic[Layers.CHARACTER.ToString()], dic["Default"], false);
+                Physics.IgnoreLayerCollision(dic[Layers.DEADBODY.ToString()], dic["Default"], false);
 
                 Debug.Log("default collisions set");
             }
