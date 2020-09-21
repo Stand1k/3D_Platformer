@@ -839,6 +839,20 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-2597749789355566267
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a18bf0534054ed4c85c62bd9fa1236b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListAbilityData:
+  - {fileID: 11400000, guid: 8d014575fd50078408b39ffe99956988, type: 2}
 --- !u!1107 &-2292869526178559938
 AnimatorStateMachine:
   serializedVersion: 5
@@ -1374,6 +1388,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4d38413ea5b60944a930a501ef27aa41, type: 2}
   - {fileID: 11400000, guid: da8d5a7ce5716a24482a8b913b7199f2, type: 2}
   - {fileID: 11400000, guid: 313e1024ae8c29349a8d37bcda69bb97, type: 2}
+  - {fileID: 11400000, guid: 88dc7314501120d4fad1cb18c346ed7a, type: 2}
 --- !u!1101 &1067502366291414058
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1534,6 +1549,7 @@ MonoBehaviour:
   ListAbilityData:
   - {fileID: 11400000, guid: f2ec50198aa509b4b9c9ead92426b411, type: 2}
   - {fileID: 11400000, guid: 6de2e939636eab140bbb3bff1c570eaf, type: 2}
+  - {fileID: 11400000, guid: 8d014575fd50078408b39ffe99956988, type: 2}
 --- !u!1101 &1728739530120786041
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1939,7 +1955,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1439929566037388566}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -2597749789355566267}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 1
   m_WriteDefaultValues: 1
@@ -2217,6 +2234,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8d2e5bbb101b1884fabc01b58585c04b, type: 2}
   - {fileID: 11400000, guid: 77c0a1213c49e77438f4d2da69f8f79a, type: 2}
   - {fileID: 11400000, guid: ea8e6610ad4d2574bab071abc418b422, type: 2}
+  - {fileID: 11400000, guid: 8d014575fd50078408b39ffe99956988, type: 2}
 --- !u!1101 &7186670224114394488
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

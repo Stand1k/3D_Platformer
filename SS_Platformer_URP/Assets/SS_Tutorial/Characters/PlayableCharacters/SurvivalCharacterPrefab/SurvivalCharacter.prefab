@@ -2775,7 +2775,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.19133721, y: 0.22944729, z: -0.0073411595}
+  m_ConnectedAnchor: {x: 0.19133721, y: 0.22944723, z: -0.0073406864}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3782,8 +3782,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.29, y: 1.89, z: 0.3054676}
-  m_Center: {x: 0, y: 0.915, z: 0.047266215}
+  m_Size: {x: 1, y: 1.85, z: 0.4}
+  m_Center: {x: 0, y: 0.915, z: 0}
 --- !u!54 &1824191606421801600
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3826,6 +3826,7 @@ MonoBehaviour:
   BottomSpheres: []
   FrontSpheres: []
   aiController: {fileID: 0}
+  boxCollider: {fileID: 0}
   GravityMultiplier: 0
   PullMultiplier: 0
   playableCharacterType: 1
@@ -3913,6 +3914,11 @@ MonoBehaviour:
   MaxPressTime: 0.1
   disallowEarlyTurn: 0
   AirMomentum: 0
+  UpdatingBoxCollider: 0
+  TargetSize: {x: 0, y: 0, z: 0}
+  Size_Speed: 0
+  TargetCenter: {x: 0, y: 0, z: 0}
+  Center_Speed: 0
 --- !u!114 &4970377646604448294
 MonoBehaviour:
   m_ObjectHideFlags: 0
