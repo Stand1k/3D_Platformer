@@ -633,11 +633,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraController
       objectReference: {fileID: 0}
-    - target: {fileID: 2078538340610232144, guid: 3885eb2354623b2488321cf48e0eaa51,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5555484835704883161, guid: 3885eb2354623b2488321cf48e0eaa51,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1922,11 +1917,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp_Green
       objectReference: {fileID: 0}
-    - target: {fileID: 2450349385989362402, guid: cdf5079a671fed44a97983f95ef22dec,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2450349385989362406, guid: cdf5079a671fed44a97983f95ef22dec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2710,11 +2700,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: yBot - Blue
       objectReference: {fileID: 0}
-    - target: {fileID: 1294883413662848761, guid: 4d635ab6426018e4094fe005a79f7787,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d635ab6426018e4094fe005a79f7787, type: 3}
 --- !u!1001 &2446436822910436161
@@ -2783,11 +2768,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lamp_Red
-      objectReference: {fileID: 0}
-    - target: {fileID: 3373979117803723844, guid: 066500d29d0a4be4483bb66cbfa5320d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 066500d29d0a4be4483bb66cbfa5320d, type: 3}
