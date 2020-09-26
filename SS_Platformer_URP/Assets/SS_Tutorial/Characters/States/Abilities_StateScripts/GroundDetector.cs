@@ -13,7 +13,7 @@ namespace ss_tutorial
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            animator.SetBool(TransitionParameter.Grounded.ToString(), true);
+            
         }
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -35,21 +35,24 @@ namespace ss_tutorial
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            
+ 
         }
 
         bool IsGrounded(CharacterControl control)
         {
             if(control.RIGID_BODY.velocity.y > -0.001f && control.RIGID_BODY.velocity.y <= 0f)
             {
-                foreach(ContactPoint c in control.contactPoints)
+                if (control.contactPoints != null)
                 {
-                    float colliderBottom = (control.transform.position.y + control.boxCollider.center.y) - (control.boxCollider.size.y / 2f);
-                    float yDifference = Mathf.Abs(c.point.y - colliderBottom);
-
-                    if(yDifference < 0.01f)
+                    foreach (ContactPoint c in control.contactPoints)
                     {
-                        return true;
+                        float colliderBottom = (control.transform.position.y + control.boxCollider.center.y) - (control.boxCollider.size.y / 2f);
+                        float yDifference = Mathf.Abs(c.point.y - colliderBottom);
+
+                        if (yDifference < 0.01f)
+                        {
+                            return true;
+                        }
                     }
                 }
             }
@@ -67,7 +70,7 @@ namespace ss_tutorial
                             return true;
                         }
                     }
-                } 
+                }
             }
 
             return false;

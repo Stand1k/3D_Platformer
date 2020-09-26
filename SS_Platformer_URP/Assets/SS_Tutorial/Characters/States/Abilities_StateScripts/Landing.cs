@@ -11,6 +11,7 @@ namespace ss_tutorial
         {
             animator.SetBool(TransitionParameter.Jump.ToString(), false);
             animator.SetBool(TransitionParameter.Move.ToString(), false);
+            animator.SetBool(TransitionParameter.Grounded.ToString(), true);
         }
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -20,7 +21,7 @@ namespace ss_tutorial
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-
+            animator.SetBool(TransitionParameter.Grounded.ToString(), true);
         }
     }
 

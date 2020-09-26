@@ -16,7 +16,9 @@ namespace ss_tutorial
 
         [Header("Momentum")]
         public bool UseMomentum;
+        public float StartingMomentum;
         public float MaxMomentum;
+        public bool ClearMomentumOnExit;
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -36,7 +38,19 @@ namespace ss_tutorial
             }
 
             control.animationProgress.disallowEarlyTurn = false;
-            control.animationProgress.AirMomentum = 0f;
+            //control.animationProgress.AirMomentum = 0f;
+
+            if(StartingMomentum > 0.001f)
+            {
+                if(control.IsFacingForward())
+                {
+                    control.animationProgress.AirMomentum = StartingMomentum;
+                }
+                else
+                {
+                    control.animationProgress.AirMomentum = -StartingMomentum;
+                }
+            }
         }
 
         private void ControlledMove(CharacterControl control, Animator animator, AnimatorStateInfo stateInfo)
@@ -119,11 +133,22 @@ namespace ss_tutorial
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             CharacterControl control = characterState.GetCharacterControl(animator);
-            control.animationProgress.AirMomentum = 0f;
+
+            if(ClearMomentumOnExit)
+            {
+                control.animationProgress.AirMomentum = 0f;
+            }
         }
 
         private void UpdateMomentum(CharacterControl control, AnimatorStateInfo stateInfo)
         {
+            if(control.animationProgress.FrameUpdated)
+            {
+                return; 
+            }
+
+            control.animationProgress.FrameUpdated = true;
+
             if (control.MoveRight)
             {
                 control.animationProgress.AirMomentum += speedGraph.Evaluate(stateInfo.normalizedTime) * Time.deltaTime;

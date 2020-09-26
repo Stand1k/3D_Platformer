@@ -3799,7 +3799,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1334268389699052069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3914,6 +3914,7 @@ MonoBehaviour:
   MaxPressTime: 0.1
   disallowEarlyTurn: 0
   AirMomentum: 0
+  FrameUpdated: 0
   UpdatingBoxCollider: 0
   UpdatingSpheres: 0
   TargetSize: {x: 0, y: 0, z: 0}
