@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace ss_tutorial
+namespace ss_3d
 {
     public class FPSDisplay : MonoBehaviour
     {

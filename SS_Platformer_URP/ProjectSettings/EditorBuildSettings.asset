@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/SS_Tutorial/Scenes/Night/CharacterSelect.unity
+    path: Assets/SS_3D/Scenes/Night/CharacterSelect.unity
     guid: 9748b6e9880114b46a2e24ff4ec7c432
   - enabled: 1
-    path: Assets/SS_Tutorial/Scenes/Night/LedgeGrab.unity
+    path: Assets/SS_3D/Scenes/Night/LedgeGrab.unity
     guid: ec17c3b6d432b5c4e995c3a69960840e
   - enabled: 0
-    path: Assets/SS_Tutorial/Scenes/Night/Main.unity
+    path: Assets/SS_3D/Scenes/Night/Main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
