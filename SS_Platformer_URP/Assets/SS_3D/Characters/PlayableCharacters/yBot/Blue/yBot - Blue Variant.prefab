@@ -189,6 +189,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiType: 0
+--- !u!208 &6368451536735165169
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294883413662848761}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.75, y: 0.25, z: 0.00001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &5153890111168080932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -509,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 6232438885783780049, guid: c4879d586e240454a8e48ca165634542,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.48
+      value: 4.55
       objectReference: {fileID: 0}
     - target: {fileID: 6232438885783780049, guid: c4879d586e240454a8e48ca165634542,
         type: 3}
@@ -574,7 +590,7 @@ PrefabInstance:
     - target: {fileID: 6232438885783780061, guid: c4879d586e240454a8e48ca165634542,
         type: 3}
       propertyPath: m_Name
-      value: yBot - Blue
+      value: yBot - Blue Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6749348532732766316, guid: c4879d586e240454a8e48ca165634542,
         type: 3}
@@ -644,6 +660,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1018356870, guid: c4879d586e240454a8e48ca165634542, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c4879d586e240454a8e48ca165634542, type: 3}
+--- !u!1 &1294883413662848761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6232438885783780061, guid: c4879d586e240454a8e48ca165634542,
+    type: 3}
+  m_PrefabInstance: {fileID: 5153890111168080932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1294883413662848757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6232438885783780049, guid: c4879d586e240454a8e48ca165634542,

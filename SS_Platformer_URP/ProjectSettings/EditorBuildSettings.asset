@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/SS_3D/Scenes/LatestScene/Scene_Sample_Day.unity
+    guid: 2db1fe4118b4d2048a65c93ca3f5b44f
   - enabled: 0
     path: Assets/SS_3D/Scenes/Night/CharacterSelect.unity
     guid: 9748b6e9880114b46a2e24ff4ec7c432
-  - enabled: 1
+  - enabled: 0
     path: Assets/SS_3D/Scenes/Night/LedgeGrab.unity
     guid: ec17c3b6d432b5c4e995c3a69960840e
   - enabled: 0

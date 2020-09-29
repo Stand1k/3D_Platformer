@@ -5,7 +5,7 @@ using UnityEditor;
 /// Hierarchy Window Group Header
 /// http://diegogiacomelli.com.br/unitytips-hierarchy-window-group-header
 /// </summary>
-namespace ss_3d
+namespace ss_tutorial
 {
     [InitializeOnLoad]
     public static class HierarchyWindowGroupHeader
