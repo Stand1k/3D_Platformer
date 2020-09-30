@@ -28,8 +28,15 @@ namespace ss_3d
                 control.MoveLeft = true;
             }
 
-            control.Turbo = true;
+
+            Vector3 dist = control.aiProgress.pathFindingAgent.StartSphere.transform.position - control.transform.position;
+
+            if(Vector3.SqrMagnitude(dist) > 2f)
+            {
+               control.Turbo = true;
+            }
         }
+
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {

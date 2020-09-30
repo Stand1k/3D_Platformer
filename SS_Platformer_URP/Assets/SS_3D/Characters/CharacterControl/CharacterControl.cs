@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace ss_3d
 {
@@ -45,6 +46,7 @@ namespace ss_3d
         public List<GameObject> FrontSpheres = new List<GameObject>();
         public AIController aiController;
         public BoxCollider boxCollider;
+        public NavMeshObstacle navMeshObstacle;
 
         [Header("Gravity")]
         public float GravityMultiplier;
@@ -82,6 +84,7 @@ namespace ss_3d
             damageDetector = GetComponentInChildren<DamageDetector>();
             aiController = GetComponentInChildren<AIController>();
             boxCollider = GetComponent<BoxCollider>();
+            navMeshObstacle = GetComponent<NavMeshObstacle>();
 
             SetColliderSpheres();
             RegisterCharacter();

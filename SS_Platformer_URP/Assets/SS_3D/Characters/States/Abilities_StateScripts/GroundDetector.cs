@@ -40,8 +40,7 @@ namespace ss_3d
 
         bool IsGrounded(CharacterControl control)
         {
-            if(control.RIGID_BODY.velocity.y > -0.001f && control.RIGID_BODY.velocity.y <= 0f)
-            {
+            
                 if (control.contactPoints != null)
                 {
                     foreach (ContactPoint c in control.contactPoints)
@@ -51,11 +50,15 @@ namespace ss_3d
 
                         if (yDifference < 0.01f)
                         {
-                            return true;
+                           if(Mathf.Abs(control.RIGID_BODY.velocity.y) < 0.01f)
+                           {
+                               return true;
+                           }
+                        
                         }
                     }
                 }
-            }
+            
 
             if(control.RIGID_BODY.velocity.y < 0f)
             {
