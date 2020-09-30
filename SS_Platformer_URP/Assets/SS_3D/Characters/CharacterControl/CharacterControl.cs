@@ -178,11 +178,12 @@ namespace ss_3d
             foreach(Collider c in RagdollParts)
             {
                 c.isTrigger = false;
-                c.attachedRigidbody.velocity = Vector3.zero;
 
                 TriggerDetector det = c.GetComponent<TriggerDetector>();
                 c.transform.localPosition = det.LastPosition;
                 c.transform.localRotation = det.LastRotation;
+
+                c.attachedRigidbody.velocity = Vector3.zero;
             }
         }
 
@@ -291,6 +292,12 @@ namespace ss_3d
             {
                 Reposition_FrontSpheres();
                 Reposition_BottomSpheres();
+            }
+
+            if(animationProgress.RagdollTriggered)
+            {
+                TurnOnRagdoll();
+                animationProgress.RagdollTriggered = false;
             }
         }
 

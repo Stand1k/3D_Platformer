@@ -140,6 +140,7 @@ namespace ss_3d
             control.GetComponent<BoxCollider>().enabled = false;
             control.ledgeChecker.GetComponent<BoxCollider>().enabled = false;
             control.RIGID_BODY.useGravity = false;
+            control.navMeshObstacle.carving = false;
 
             DamageTaken++;
         }

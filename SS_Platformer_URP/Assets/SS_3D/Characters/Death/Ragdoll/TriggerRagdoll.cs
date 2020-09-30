@@ -22,8 +22,10 @@ namespace ss_3d
             {
                 if(!control.animationProgress.RagdollTriggered)
                 {
-                    control.TurnOnRagdoll();
-                    control.animationProgress.RagdollTriggered = true;
+                    if(control.SkinnedMeshAnimator.enabled)
+                    {
+                        control.animationProgress.RagdollTriggered = true;
+                    }
                 }
             }
 
@@ -32,8 +34,8 @@ namespace ss_3d
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = characterState.GetCharacterControl(animator);
-            control.animationProgress.RagdollTriggered = false;
+            //CharacterControl control = characterState.GetCharacterControl(animator);
+            //control.animationProgress.RagdollTriggered = false;
         }
     }
 }

@@ -134,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177638, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22323726, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_Enabled
@@ -538,7 +538,6 @@ GameObject:
   - component: {fileID: 107786775}
   - component: {fileID: 107786774}
   - component: {fileID: 107786773}
-  - component: {fileID: 107786772}
   - component: {fileID: 107786771}
   m_Layer: 0
   m_Name: GridRect 1x1x10
@@ -547,8 +546,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &107786771
-MeshCollider:
+--- !u!65 &107786771
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -557,22 +556,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 465780661}
---- !u!114 &107786772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107786770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 10}
+  m_Center: {x: 0.5, y: 0.5, z: -5}
 --- !u!23 &107786773
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -645,7 +631,6 @@ GameObject:
   - component: {fileID: 144133923}
   - component: {fileID: 144133922}
   - component: {fileID: 144133921}
-  - component: {fileID: 144133920}
   - component: {fileID: 144133919}
   m_Layer: 0
   m_Name: GridRect (7)
@@ -667,18 +652,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &144133920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144133918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &144133921
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -751,7 +724,6 @@ GameObject:
   - component: {fileID: 149250591}
   - component: {fileID: 149250590}
   - component: {fileID: 149250589}
-  - component: {fileID: 149250588}
   - component: {fileID: 149250587}
   m_Layer: 0
   m_Name: GridRect (12)
@@ -773,18 +745,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &149250588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149250586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &149250589
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -857,7 +817,6 @@ GameObject:
   - component: {fileID: 151992520}
   - component: {fileID: 151992519}
   - component: {fileID: 151992518}
-  - component: {fileID: 151992517}
   - component: {fileID: 151992516}
   m_Layer: 0
   m_Name: GridRect 1x1x10 (2)
@@ -866,8 +825,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &151992516
-MeshCollider:
+--- !u!65 &151992516
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -876,22 +835,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 11359026}
---- !u!114 &151992517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151992515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 10}
+  m_Center: {x: 0.5, y: 0.5, z: -5}
 --- !u!23 &151992518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1517,7 +1463,6 @@ GameObject:
   - component: {fileID: 252097479}
   - component: {fileID: 252097478}
   - component: {fileID: 252097477}
-  - component: {fileID: 252097476}
   - component: {fileID: 252097475}
   m_Layer: 0
   m_Name: GridRect (4)
@@ -1539,18 +1484,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &252097476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252097474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &252097477
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2441,7 +2374,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.05008384, y: -0.65285546, z: 0.043331955, w: 0.75458187}
+  m_LocalRotation: {x: 0.049734958, y: -0.65888184, z: 0.043731958, w: 0.74932545}
   m_LocalPosition: {x: 14.9981575, y: 2.4796498, z: 0.68181914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3073,7 +3006,6 @@ GameObject:
   - component: {fileID: 653564682}
   - component: {fileID: 653564681}
   - component: {fileID: 653564680}
-  - component: {fileID: 653564679}
   - component: {fileID: 653564678}
   m_Layer: 0
   m_Name: GridRect (11)
@@ -3095,18 +3027,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &653564679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653564677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &653564680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3179,7 +3099,6 @@ GameObject:
   - component: {fileID: 666063415}
   - component: {fileID: 666063414}
   - component: {fileID: 666063413}
-  - component: {fileID: 666063412}
   - component: {fileID: 666063411}
   m_Layer: 0
   m_Name: GridRect (8)
@@ -3201,18 +3120,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &666063412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666063410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &666063413
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3334,7 +3241,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765881197}
-  m_LocalRotation: {x: 0.05008384, y: -0.65285546, z: 0.043331955, w: 0.75458187}
+  m_LocalRotation: {x: 0.049734958, y: -0.65888184, z: 0.043731958, w: 0.74932545}
   m_LocalPosition: {x: 14.9981575, y: 2.4796498, z: 0.68181914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3426,6 +3333,86 @@ PrefabInstance:
       propertyPath: m_Name
       value: yBot - Blue Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4528248015430220514, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.4059544
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158301265783580368, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.00000026444803
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158301265783580368, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.00000034791785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689224986684078803, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.0000002408318
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689224986684078803, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.000000026387594
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076847193192094203, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.00000041728703
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076847193192094203, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.00000041164455
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115250672958702335, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.222047
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115250672958702335, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.035217896
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481142439140314041, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.066564
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348688822572429771, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.22204688
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357463819135954056, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.0000012805019
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357463819135954056, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.215689
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357463819135954056, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.026496418
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796799557877104899, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.3871452
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979222233407772758, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.40595406
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d635ab6426018e4094fe005a79f7787, type: 3}
 --- !u!1 &799176867
@@ -3439,7 +3426,6 @@ GameObject:
   - component: {fileID: 799176872}
   - component: {fileID: 799176871}
   - component: {fileID: 799176870}
-  - component: {fileID: 799176869}
   - component: {fileID: 799176868}
   m_Layer: 0
   m_Name: GridRect (9)
@@ -3461,18 +3447,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &799176869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799176867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &799176870
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3708,7 +3682,6 @@ GameObject:
   - component: {fileID: 827607904}
   - component: {fileID: 827607903}
   - component: {fileID: 827607902}
-  - component: {fileID: 827607901}
   - component: {fileID: 827607900}
   m_Layer: 0
   m_Name: Platform (1)
@@ -3717,8 +3690,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &827607900
-MeshCollider:
+--- !u!65 &827607900
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3727,22 +3700,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 979362260}
---- !u!114 &827607901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827607899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &827607902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4193,7 +4153,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944571762}
-  m_LocalRotation: {x: 0.050083842, y: -0.65285546, z: 0.04333196, w: 0.75458187}
+  m_LocalRotation: {x: 0.049734958, y: -0.65888184, z: 0.043731958, w: 0.74932545}
   m_LocalPosition: {x: 14.9981575, y: 2.4796498, z: 0.68181914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4391,72 +4351,82 @@ PrefabInstance:
     - target: {fileID: 1044365924164309268, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.00000006478513
+      value: -0.000000041502062
       objectReference: {fileID: 0}
     - target: {fileID: 1044365924164309268, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.22886857
+      value: 0.22886865
       objectReference: {fileID: 0}
     - target: {fileID: 1044365924164309268, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00000018626454
+      value: -0.00000006705523
       objectReference: {fileID: 0}
     - target: {fileID: 1044417464374610659, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.025733115
+      value: -0.025733354
       objectReference: {fileID: 0}
     - target: {fileID: 1044478726763379480, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.00000015948893
+      value: 0.00000007799824
       objectReference: {fileID: 0}
     - target: {fileID: 1044478726763379480, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.22897859
+      value: 0.22897853
       objectReference: {fileID: 0}
     - target: {fileID: 1044478726763379480, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00000002980233
+      value: 0.000000022351747
       objectReference: {fileID: 0}
     - target: {fileID: 1044585449510970213, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.005199514
+      value: -0.005199633
       objectReference: {fileID: 0}
     - target: {fileID: 1044607455770999601, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.009615069
+      value: -0.00961501
       objectReference: {fileID: 0}
     - target: {fileID: 1044609161791840127, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.22944723
+      value: 0.22944726
       objectReference: {fileID: 0}
     - target: {fileID: 1044609161791840127, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.0073406864
+      value: -0.007340925
       objectReference: {fileID: 0}
     - target: {fileID: 1044615204198741488, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.0000001927838
+      value: -0.00000001396984
       objectReference: {fileID: 0}
     - target: {fileID: 1044651740802970898, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.00000009406358
+      value: 0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044687619609532659, guid: 164e8e4dc68a9fb479e69a4c06300456,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.0067033987
       objectReference: {fileID: 0}
     - target: {fileID: 1044805538005212702, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.023138
+      value: 0.023138167
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044805538005212702, guid: 164e8e4dc68a9fb479e69a4c06300456,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.37638387
       objectReference: {fileID: 0}
     - target: {fileID: 1334268389699052068, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
@@ -4521,27 +4491,32 @@ PrefabInstance:
     - target: {fileID: 2474484344320600771, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.00000019744036
+      value: 0.00000014156102
       objectReference: {fileID: 0}
     - target: {fileID: 2474484344320600771, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.23231894
+      value: 0.23231892
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474484344320600771, guid: 164e8e4dc68a9fb479e69a4c06300456,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.0000000372529
       objectReference: {fileID: 0}
     - target: {fileID: 6197329170541505445, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.00000006705523
+      value: 0.00000004470349
       objectReference: {fileID: 0}
     - target: {fileID: 6197329170541505445, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.23155949
+      value: 0.23155946
       objectReference: {fileID: 0}
     - target: {fileID: 6197329170541505445, guid: 164e8e4dc68a9fb479e69a4c06300456,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.0000002607703
+      value: 0.00000023096797
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 164e8e4dc68a9fb479e69a4c06300456, type: 3}
@@ -4924,7 +4899,6 @@ GameObject:
   - component: {fileID: 1057040288}
   - component: {fileID: 1057040287}
   - component: {fileID: 1057040286}
-  - component: {fileID: 1057040285}
   - component: {fileID: 1057040284}
   m_Layer: 0
   m_Name: Platform
@@ -4933,8 +4907,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &1057040284
-MeshCollider:
+--- !u!65 &1057040284
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4943,22 +4917,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1404935192}
---- !u!114 &1057040285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057040283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1057040286
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5306,7 +5267,6 @@ GameObject:
   - component: {fileID: 1106775267}
   - component: {fileID: 1106775266}
   - component: {fileID: 1106775265}
-  - component: {fileID: 1106775264}
   - component: {fileID: 1106775263}
   m_Layer: 0
   m_Name: GridRect (17)
@@ -5328,18 +5288,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1106775264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106775262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1106775265
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5481,7 +5429,6 @@ GameObject:
   - component: {fileID: 1135307214}
   - component: {fileID: 1135307213}
   - component: {fileID: 1135307212}
-  - component: {fileID: 1135307211}
   - component: {fileID: 1135307210}
   m_Layer: 0
   m_Name: GridRect 1x1x10 (1)
@@ -5490,8 +5437,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &1135307210
-MeshCollider:
+--- !u!65 &1135307210
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5500,22 +5447,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 966132884}
---- !u!114 &1135307211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135307209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 10}
+  m_Center: {x: 0.5, y: 0.5, z: -5}
 --- !u!23 &1135307212
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5588,7 +5522,6 @@ GameObject:
   - component: {fileID: 1180193742}
   - component: {fileID: 1180193741}
   - component: {fileID: 1180193740}
-  - component: {fileID: 1180193739}
   - component: {fileID: 1180193738}
   m_Layer: 0
   m_Name: GridRect (6)
@@ -5610,18 +5543,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1180193739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180193737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1180193740
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6291,7 +6212,6 @@ GameObject:
   - component: {fileID: 1328880387}
   - component: {fileID: 1328880386}
   - component: {fileID: 1328880385}
-  - component: {fileID: 1328880384}
   - component: {fileID: 1328880383}
   m_Layer: 0
   m_Name: GridRect (19)
@@ -6313,18 +6233,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1328880384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328880382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1328880385
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6397,7 +6305,6 @@ GameObject:
   - component: {fileID: 1392832664}
   - component: {fileID: 1392832663}
   - component: {fileID: 1392832662}
-  - component: {fileID: 1392832661}
   - component: {fileID: 1392832660}
   m_Layer: 0
   m_Name: GridRect (18)
@@ -6419,18 +6326,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1392832661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392832659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1392832662
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6879,7 +6774,6 @@ GameObject:
   - component: {fileID: 1564488827}
   - component: {fileID: 1564488826}
   - component: {fileID: 1564488825}
-  - component: {fileID: 1564488824}
   - component: {fileID: 1564488823}
   m_Layer: 0
   m_Name: GridRect (15)
@@ -6901,18 +6795,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1564488824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564488822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1564488825
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7078,7 +6960,6 @@ GameObject:
   - component: {fileID: 1638551168}
   - component: {fileID: 1638551167}
   - component: {fileID: 1638551166}
-  - component: {fileID: 1638551165}
   - component: {fileID: 1638551164}
   m_Layer: 0
   m_Name: GridRect (20)
@@ -7100,18 +6981,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1638551165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638551163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1638551166
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7347,7 +7216,6 @@ GameObject:
   - component: {fileID: 1682804793}
   - component: {fileID: 1682804792}
   - component: {fileID: 1682804791}
-  - component: {fileID: 1682804790}
   - component: {fileID: 1682804789}
   m_Layer: 0
   m_Name: GridRect (14)
@@ -7369,18 +7237,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1682804790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682804788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1682804791
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7453,7 +7309,6 @@ GameObject:
   - component: {fileID: 1739182522}
   - component: {fileID: 1739182521}
   - component: {fileID: 1739182520}
-  - component: {fileID: 1739182519}
   - component: {fileID: 1739182518}
   m_Layer: 0
   m_Name: GridRect (5)
@@ -7475,18 +7330,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1739182519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1739182517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1739182520
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8148,7 +7991,6 @@ GameObject:
   - component: {fileID: 1889856952}
   - component: {fileID: 1889856951}
   - component: {fileID: 1889856950}
-  - component: {fileID: 1889856949}
   - component: {fileID: 1889856948}
   m_Layer: 0
   m_Name: GridRect (3)
@@ -8170,18 +8012,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1889856949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889856947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1889856950
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8313,6 +8143,76 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: yBot - Blue Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4528248015430220514, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.4059544
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158301265783580368, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.00000026444803
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158301265783580368, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.00000034791785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689224986684078803, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.0000002408318
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689224986684078803, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.000000026387594
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076847193192094203, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.000000417287
+      objectReference: {fileID: 0}
+    - target: {fileID: 7076847193192094203, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.000000065192616
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115250672958702335, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.222047
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481142439140314041, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.066564
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348688822572429771, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.22204688
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357463819135954056, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.0000012805019
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357463819135954056, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.215689
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796799557877104899, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.3871452
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979222233407772758, guid: 4d635ab6426018e4094fe005a79f7787,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.40595406
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d635ab6426018e4094fe005a79f7787, type: 3}
@@ -8583,7 +8483,6 @@ GameObject:
   - component: {fileID: 1955423850}
   - component: {fileID: 1955423849}
   - component: {fileID: 1955423848}
-  - component: {fileID: 1955423847}
   - component: {fileID: 1955423846}
   m_Layer: 0
   m_Name: GridRect (16)
@@ -8605,18 +8504,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1955423847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955423845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1955423848
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8689,7 +8576,6 @@ GameObject:
   - component: {fileID: 1968576508}
   - component: {fileID: 1968576507}
   - component: {fileID: 1968576506}
-  - component: {fileID: 1968576505}
   - component: {fileID: 1968576504}
   m_Layer: 0
   m_Name: GridRect (10)
@@ -8711,18 +8597,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &1968576505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968576503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1968576506
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8795,7 +8669,6 @@ GameObject:
   - component: {fileID: 2050535508}
   - component: {fileID: 2050535507}
   - component: {fileID: 2050535506}
-  - component: {fileID: 2050535505}
   - component: {fileID: 2050535504}
   m_Layer: 0
   m_Name: GridRect (13)
@@ -8817,18 +8690,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 5, y: 0.5, z: -5}
---- !u!114 &2050535505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050535503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8233d90336aea43098adf6dbabd606a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &2050535506
 MeshRenderer:
   m_ObjectHideFlags: 0
