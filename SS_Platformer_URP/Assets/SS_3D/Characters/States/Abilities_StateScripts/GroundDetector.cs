@@ -40,7 +40,6 @@ namespace ss_3d
 
         bool IsGrounded(CharacterControl control)
         {
-            
                 if (control.contactPoints != null)
                 {
                     foreach (ContactPoint c in control.contactPoints)
